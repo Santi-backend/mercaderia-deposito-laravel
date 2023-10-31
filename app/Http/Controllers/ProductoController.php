@@ -35,7 +35,7 @@ class ProductoController extends Controller
             $datosProducto['Foto'] = $request->file('Foto')->store('uploads', 'public');
         }
         producto::insert($datosProducto);
-        return response()->json($datosProducto);
+        return redirect('producto')->with('mensaje' , 'Producto creado con exito');
     }
 
     /**
@@ -68,7 +68,7 @@ class ProductoController extends Controller
         }
         Producto::where('id', '=', $id)->update($datosProducto);
         $producto = Producto::findOrFail($id);
-        return view('producto.edit', compact('producto'));
+        return redirect('producto')->with('mensaje' , 'Producto actualizado exitosamente');
     }
 
     /**
@@ -79,6 +79,6 @@ class ProductoController extends Controller
         $producto = Producto::findOrFail($id);
         Storage::delete('public/' . $producto->Foto);
         Producto::destroy($id);
-        return redirect('producto');
+        return redirect('producto')->with('mensaje' , 'Producto borrado exitosamente');
     }
 }

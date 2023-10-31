@@ -1,4 +1,10 @@
 Mostrar la lista de productos
+<br><br>
+<a href="{{url('producto/create')}}">Crear nuevo producto</a>
+<br>
+@if (Session::has('mensaje'))
+{{Session::get('mensaje')}}
+@endif
 
 <table>
     <thead>
