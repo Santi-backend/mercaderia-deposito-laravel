@@ -2,8 +2,13 @@ Mostrar la lista de productos
 <br><br>
 <a href="{{url('producto/create')}}">Crear nuevo producto</a>
 <br>
+<<<<<<< HEAD
 @if (Session::has('mensaje'))
 {{Session::get('mensaje')}}
+=======
+@if(Session::has('mensaje'))
+    {{Session::get('mensaje')}}
+>>>>>>> 07b93e3eb3626f57a7ece87b2e82f48299a91530
 @endif
 
 <table>

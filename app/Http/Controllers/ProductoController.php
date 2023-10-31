@@ -69,6 +69,10 @@ class ProductoController extends Controller
         Producto::where('id', '=', $id)->update($datosProducto);
         $producto = Producto::findOrFail($id);
         return redirect('producto')->with('mensaje' , 'Producto actualizado exitosamente');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07b93e3eb3626f57a7ece87b2e82f48299a91530
     }
 
     /**

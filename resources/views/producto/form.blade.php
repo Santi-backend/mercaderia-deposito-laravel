@@ -15,6 +15,10 @@
 @endif
 <input type="file" name="Foto" id="Foto">
 <br>
+<<<<<<< HEAD
 <input type="submit" value="{{$accion}} producto">
+=======
+<input type="submit" value="{{$accion }} producto">
+>>>>>>> 07b93e3eb3626f57a7ece87b2e82f48299a91530
 <br>
 <a href="{{url('producto')}}">Regresar</a>
