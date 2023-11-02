@@ -14,7 +14,7 @@ class ProductoController extends Controller
     public function index()
     {
         $datos['productos'] = Producto::paginate(5);
-        return view('producto.index', $datos);
+        return view('producto.index', $datos); 
     }
 
     /**
